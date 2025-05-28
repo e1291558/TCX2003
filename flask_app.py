@@ -1,6 +1,6 @@
 # A very simple Flask Hello World app for you to get started with...
 
-from flask import Flask
+from flask import Flask, render_template
 import os
 
 app = Flask(__name__)
@@ -15,4 +15,4 @@ print(f"Env printing: host->{host},user->{user},password->{password},db->{db}")
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Flask!'
+    return render_template('index.html')
